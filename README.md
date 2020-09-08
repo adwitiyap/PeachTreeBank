@@ -1,8 +1,8 @@
 # PeachTree Bank
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+This project has been developed using Angular 9 and NGRX 8. It is based on store-based architecture and makes use of smart & dumb component philosophy.
 
-## Install Dependencies
+## Installing Dependencies
 
 Run `npm install` to install all required dependencies
 

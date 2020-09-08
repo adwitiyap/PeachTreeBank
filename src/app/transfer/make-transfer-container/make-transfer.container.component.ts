@@ -27,7 +27,7 @@ export class MakeTransferContainerComponent {
                     merchant: transfer.toAccount,
                     merchantLogo: '',
                     transactionDate: Date(),
-                    transactionType: 'Online Payment'
+                    transactionType: 'Online Transfer'
                 }
             }
         ))

@@ -1,4 +1,8 @@
-<div class="item-container">
+<div class=""></div>
+<div class="item-container"
+    [ngClass]="{'red-left': transaction.transactionType === 'Card Payment',
+                'green-left': transaction.transactionType === 'Online Transfer',
+                'yellow-left': transaction.transactionType === 'Transaction'}">
     <div class="tr-details">
         <div class="tr-date">{{ transaction.transactionDate | date: 'MMM dd' }}</div>
         <div class="tr-logo">

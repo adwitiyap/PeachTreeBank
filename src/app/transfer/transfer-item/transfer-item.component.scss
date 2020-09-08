@@ -1,16 +1,22 @@
 .item-container {
     display: flex;
     justify-content: space-between;
-    border: 1px solid #d8d3d3;
-    padding: 10px;
+    border-top: 1px solid #d8d3d3;
+    border-right: 1px solid #d8d3d3;
+    border-bottom: 1px solid #d8d3d3;
     align-items: center;
+
+    .color-bar {
+        height: 100%;
+        width: 10px;
+        background-color: red;
+    }
 
     .tr-details {
         display: flex;
-        
         align-items: center;
-
         width: 70%;
+        margin: 10px;
 
         .tr-date {
             width: 25%;
@@ -35,5 +41,18 @@
 
     .amount {
         font-weight: 600;
+        margin: 10px;
     }
+}
+
+.red-left {
+    border-left: 10px solid #b30101;
+}
+
+.green-left {
+    border-left: 10px solid green;
+}
+
+.yellow-left {
+    border-left: 10px solid #af2e2e;
 }

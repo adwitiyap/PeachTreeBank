@@ -1,0 +1,67 @@
+<div class="transfer-list-container">
+    <div class="transfer-list-header">
+        <img src="../../../assets/briefcase.png">
+        <span>Recent Transactions</span>
+    </div>
+    <div class="transfer-list-body"
+        [formGroup]="transferListForm">
+
+        <div class="config">
+            <div>
+                <input type="text"
+                    class="search-field"
+                    placeholder="Search by typing..."
+                    (keyup)="searchData()"
+                    formControlName="searchKey" />
+                <img *ngIf="this.transferListForm.controls.searchKey.value != ''"
+                    (click)="onSearchKeyClear()"
+                    class="x-icon"
+                    src="../../../assets/x-png-35407.png">
+            </div>
+
+            <div class="sort-container">
+                <div class="sort-label"
+                    translate="TRANSACTIONS.SORT_BY"></div>
+                <button class="sort-btn"
+                    (click)="sort('byDate')">
+                    <span>DATE</span>
+                    <span *ngIf="lastSortKey=='byDate'">
+                        <img *ngIf="isDescOrder"
+                            class="triangle"
+                            src="../../../assets/triangle.png">
+                        <img *ngIf="!isDescOrder"
+                            class="triangle"
+                            src="../../../assets/reverse-triangle.png">
+                    </span>
+                </button>
+                <button class="sort-btn"
+                    (click)="sort('byBeneficiary')">
+                    <span>BENEFICIARY</span>
+                    <span *ngIf="lastSortKey=='byBeneficiary'">
+                        <img *ngIf="isDescOrder"
+                            class="triangle"
+                            src="../../../assets/triangle.png">
+                        <img *ngIf="!isDescOrder"
+                            class="triangle"
+                            src="../../../assets/reverse-triangle.png">
+                    </span>
+                </button>
+                <button class="sort-btn"
+                    (click)="sort('byAmount')">
+                    <span>AMOUNT</span>
+                    <span *ngIf="lastSortKey=='byAmount'">
+                        <img *ngIf="isDescOrder"
+                            class="triangle"
+                            src="../../../assets/triangle.png">
+                        <img *ngIf="!isDescOrder"
+                            class="triangle"
+                            src="../../../assets/reverse-triangle.png">
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <pb-transfer-item *ngFor="let transaction of filteredTransactionList"
+            [transaction]="transaction"></pb-transfer-item>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+{
+    "MAKE_TRANSFER": {
+        "MAKE_A_TRANSFER": "Make a Transfer_FR",
+        "FROM_ACCOUNT": "FROM ACCOUNT_FR",
+        "TO_ACCOUNT": "TO ACCOUNT_FR",
+        "AMOUNT": "AMOUNT_FR",
+        "SUBMIT": "SUBMIT_FR",
+        "TO_ACCOUNT_REQUIRED": "To Account is required_FR",
+        "AMOUNT_REQUIRED": "Amount is required_FR",
+        "AMOUNT_SHOULD_BE_A_NUMBER": "Amount should be a number_FR"
+    },
+    "TRANSACTIONS": {
+        "RECENT_TRANSACTIONS": "Recent Transactions_FR",
+        "SORT_BY": "Sort by_FR",
+        "DATE": "DATE_FR",
+        "BENEFICIARY": "BENEFICIARY_FR",
+        "AMOUNT": "AMOUNT_FR"
+    }
+}

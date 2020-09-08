@@ -1,0 +1,39 @@
+.item-container {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #d8d3d3;
+    padding: 10px;
+    align-items: center;
+
+    .tr-details {
+        display: flex;
+        
+        align-items: center;
+
+        width: 70%;
+
+        .tr-date {
+            width: 25%;
+        }
+
+        .tr-logo {
+            width: 25%;
+
+            .merchant-logo {
+                width: 50px;
+            }
+        }
+
+        .product-details {
+            width: 50%;
+
+            .merchant {
+                font-weight: 600;
+            }
+        }
+    }
+
+    .amount {
+        font-weight: 600;
+    }
+}

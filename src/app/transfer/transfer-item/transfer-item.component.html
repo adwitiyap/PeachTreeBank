@@ -1,0 +1,14 @@
+<div class="item-container">
+    <div class="tr-details">
+        <div class="tr-date">{{ transaction.transactionDate | date: 'MMM dd' }}</div>
+        <div class="tr-logo">
+            <img class="merchant-logo"
+                src="{{ transaction.merchantLogo }}" />
+        </div>
+        <div class="product-details">
+            <div class="merchant">{{ transaction.merchant }}</div>
+            <div class="payment-type">{{ transaction.transactionType }}</div>
+        </div>
+    </div>
+    <div class="amount">{{ transaction.amount | currency }}</div>
+</div>

@@ -1,0 +1,61 @@
+.transfer-container {
+    width: 250px;
+
+    .transfer-header {
+        display: flex;
+        padding: 10px;
+
+        background-color: #00838F;
+        color: whitesmoke;
+        height: 30px;
+
+        img {
+            margin-right: 30px;
+            width: 20px;
+            height: 20px;
+        }
+    }
+    
+    .transfer-body {
+        margin: 20px;
+    
+        .field-container {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+
+            .label {
+                font-weight: 600;
+            }
+    
+            input {
+                margin-top: 10px;
+                width: 100%;
+    
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: .5px solid gray;
+            }
+        }
+
+            
+    .container-btn {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+    
+        .submit-btn {
+            background-color: rgb(255, 87, 34);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            width: 120px;
+            height: 30px;
+        }
+    }
+    }
+
+}
+
+

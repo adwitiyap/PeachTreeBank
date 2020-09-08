@@ -1,0 +1,71 @@
+<div class="transfer-container">
+    <div class="transfer-header">
+        <img src="../../../assets/darrow.jpeg">
+        <span *ngIf="!isPreviewMode">Make a Transfer</span>
+        <span *ngIf="isPreviewMode">Preview: Make a Transfer</span>
+    </div>
+    <div class="transfer-body"
+        [formGroup]="transferForm">
+
+        <div class="field-container">
+            <div class="label"
+                translate="MAKE_TRANSFER.FROM_ACCOUNT"></div>
+            <div>
+                <input type="text"
+                    formControlName="fromAccount" />
+            </div>
+        </div>
+
+        <div class="field-container">
+            <div class="label"
+                translate='MAKE_TRANSFER.TO_ACCOUNT'>
+            </div>
+            <div *ngIf="!isPreviewMode">
+                <input type="text"
+                    formControlName="toAccount"
+                    [ngClass]="{ 'is-invalid': submitted && f.toAccount.errors }" />
+                <div *ngIf="submitted && f.toAccount.errors"
+                    class="invalid-toAccount">
+                    <div class="error"
+                        *ngIf="f.toAccount.errors.required"
+                        translate="MAKE_TRANSFER.TO_ACCOUNT_REQUIRED"></div>
+                </div>
+            </div>
+            <div *ngIf="isPreviewMode">{{ this.transferForm.controls.toAccount.value }}</div>
+        </div>
+
+        <div class="field-container">
+            <div class="label"
+                translate='MAKE_TRANSFER.AMOUNT'>
+            </div>
+            <div *ngIf="!isPreviewMode">
+                <input type="text"
+                    placeholder="$ 0.00"
+                    formControlName="amount" />
+                <div *ngIf="submitted && f.amount.errors"
+                    class="invalid-amount">
+                    <div class="error"
+                        *ngIf="f.amount.errors.required"
+                        translate="MAKE_TRANSFER.AMOUNT_REQUIRED"></div>
+                    <div class="error"
+                        *ngIf="f.amount.errors.pattern"
+                        translate="MAKE_TRANSFER.AMOUNT_SHOULD_BE_A_NUMBER"></div>
+                </div>
+            </div>
+            <div *ngIf="isPreviewMode">{{ this.transferForm.controls.amount.value }}</div>
+        </div>
+
+
+        <div class="container-btn">
+            <button (click)="onSubmitClick()"
+                *ngIf="!isPreviewMode"
+                translate='MAKE_TRANSFER.SUBMIT'></button>
+            <button (click)="onBackClick()"
+                *ngIf="isPreviewMode"
+                translate='MAKE_TRANSFER.BACK'></button>
+            <button (click)="onTransferClick()"
+                *ngIf="isPreviewMode"
+                translate='MAKE_TRANSFER.TRANSFER'></button>
+        </div>
+    </div>
+</div>

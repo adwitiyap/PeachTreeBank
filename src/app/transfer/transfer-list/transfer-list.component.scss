@@ -1,0 +1,79 @@
+.transfer-list-container {
+    width: 750px;
+    background-color: white;
+
+    .transfer-list-header {
+        display: flex;
+        padding: 10px;
+
+        background-color: #00838F;
+        color: whitesmoke;
+        height: 30px;
+
+        img {
+            margin-right: 300px;
+            width: 20px;
+            height: 20px;
+        }
+    }
+    
+    .transfer-list-body {
+        padding: 20px;
+
+        .config {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            .x-icon {
+                width: 10px;
+                margin-left: -12px;
+            }
+
+            .sort-container {
+                display: flex;
+                justify-content: space-between;
+
+                button {
+                    border: .5px solid gray;
+                    // border-bottom: .5px solid gray;
+                    // border-left: .5px solid gray;
+                    // border-right: none;
+
+                    // :last-child {
+                    //     border-right: .5px solid gray;
+                    // }
+                }
+
+                .sort-label {
+                    margin-right: 10px;
+                    margin-top: 4px;
+                    font-weight: 600;
+                }
+
+                .sort-btn {
+                    background-color: white;
+
+                    .triangle {
+                        width: 8px;
+                        margin-left: 5px;
+                    }
+                }
+            }
+
+            .search-field {
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: 0.5px solid gray;
+                padding-bottom: 8px;
+            }
+
+            .search-field:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+
